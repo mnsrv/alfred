@@ -7,7 +7,6 @@
   :plugins [[lein-environ "1.1.0"]]
 
   :main ^:skip-aot alfred.core
-  :target-path "target/%s"
 
   :profiles {
     :uberjar {
