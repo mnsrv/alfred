@@ -59,7 +59,7 @@
 
   (h/command-fn "aeroflot"
     (fn [{{id :id :as chat} :chat}]
-      (when (some #(= (str id) %) (str/split chat-ids #","))
+      (when (some #(= (str id) %) (str/split chat-ids #"-"))
         (println "Bot joined new chat: " chat)
         (t/send-text token id (str (getAeroflot))))))
 
