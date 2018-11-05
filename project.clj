@@ -6,11 +6,12 @@
 
   :plugins [[lein-environ "1.1.0"]]
 
-  :main alfred.core
+  :main ^:skip-aot alfred.core
+  :target-path "target/%s"
 
   :profiles {
     :uberjar {
-      :aot          [alfred.server]
+      :aot :all
       :uberjar-name "alfred.jar"
     }
   })
